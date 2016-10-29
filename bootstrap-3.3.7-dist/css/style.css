@@ -4,6 +4,9 @@ background-color: #001a3a;
 #header{
 padding-top: 12px;
 height: 60px;
+background-image: url(img/platzhalterbutton);
+background-repeat: no-repeat;
+background-position: center;
 }
 #footer{
 height: 50px;
@@ -11,4 +14,8 @@ color: #4565ad;
 }
 .content{
   margin-top: 60px;
+}
+#menubutton{
+  height: 30px;
+  width: 30px;
 }
