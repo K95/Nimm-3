@@ -1,16 +1,19 @@
 .navbar{
 background-color: #001a3a;
 }
+
+
+
 #header{
-padding-top: 12px;
-height: 60px;
-background-image: url(img/platzhalterbutton);
-background-repeat: no-repeat;
-background-position: center;
+ height: 60px;
+ padding-top: 12px;
+ background-image: url(../img/platzhaltercheck.png);
+ background-repeat: repeat;
+ background-position: center;
 }
 #footer{
-height: 50px;
-color: #4565ad;
+ height: 50px;
+ color: #4565ad;
 }
 .content{
   margin-top: 60px;
@@ -18,4 +21,12 @@ color: #4565ad;
 #menubutton{
   height: 30px;
   width: 30px;
+}
+.split{
+  display: inline-block;
+  height: 35px;
+  width: 1px;
+  margin:0px 3px -15px 3px;
+  padding: 0px;
+  border-left: solid #4565ad 1px;
 }
