@@ -2,14 +2,9 @@
 background-color: #001a3a;
 }
 
-
-
 #header{
  height: 60px;
  padding-top: 12px;
- background-image: url(../img/platzhaltercheck.png);
- background-repeat: repeat;
- background-position: center;
 }
 #footer{
  height: 50px;
@@ -21,6 +16,8 @@ background-color: #001a3a;
 #menubutton{
   height: 30px;
   width: 30px;
+  background-color: transparent;
+  border-style: none;
 }
 .split{
   display: inline-block;
