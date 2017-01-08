@@ -1,0 +1,20 @@
+body{
+  display: flex;
+
+}
+.left{
+  margin-top: 60px;
+  margin-bottom: 50px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.middle{
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.right{
+  margin-top: 60px;
+  margin-bottom: 50px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

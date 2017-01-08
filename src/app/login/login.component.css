@@ -1,0 +1,68 @@
+.header-picture{
+  width: 100%;
+  max-width: 559px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.user-field{
+  color : #8da6d6;
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.check-register{
+  text-align: center;
+  font-size: 13pt;
+  color: #8da6d6;
+}
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.text-logo{
+  text-align: center;
+  margin: 0px;
+  font-size: 9px;
+  color: #001a3a;
+}
+.text-description{
+  text-align: center;
+  font-size: 9pt;
+  color: #8da6d6;
+}
+.field{
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid #d3ddf2;
+}
+.check-night-button{
+  height: 40px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 2px solid #001a3a;
+  border-radius: 5px;
+  background-color: #001a3a;
+  color: white;
+}
+.center-logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

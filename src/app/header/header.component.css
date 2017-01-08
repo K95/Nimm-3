@@ -1,0 +1,223 @@
+body{
+  position: fixed;
+}
+.flex-container {
+    direction: ltr;
+    flex-flow: row;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #001a3a;
+}
+
+.flex-button{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+.left{
+  width: 258px;
+  justify-content: flex-start;
+}
+.logo{
+  text-align: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: 12px;
+}
+.right{
+  justify-content: flex-end;
+}
+
+.split{
+  float: left;
+  display: inline-block;
+  height: 30px;
+  width: 1px;
+  margin: 4px;
+  margin-bottom: 8px;
+  margin-top: 17px;
+  border-left: solid #4565ad 1px;
+}
+.dropdown {
+  z-index: 1;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 160px;
+  border-top: solid blue 10px;
+  border: solid white 2px;
+  border-radius: 2px;
+  margin-top: 40px;
+  width:250px;
+  overflow: hidden;
+}
+.dropdown-content a{
+  text-align: left;
+  font-size: 13pt;
+  color: #4565ad;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  background-color: #001a3a;
+  margin: 2px 0px;
+  border-radius: 2px;
+}
+
+.dropdown-content:before{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 16px;
+  top: 0;
+  border: 5px solid;
+  border-color: transparent transparent white white;
+}
+
+.dropdown-content a:hover {
+  background-color: #8da6d6;
+  color: white;
+  text-decoration: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+.dropdown-scroll{
+  max-height: calc(100% - 115px);
+  overflow: auto;
+  margin-right: -20px;
+}
+
+.dropdown-first {
+  direction: ltr;
+  flex-flow: row;
+  background-color: #001a3a;
+  min-height: 125px;
+}
+.dropdown-first-icon {
+  float: left;
+  width: 90px !important;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+.dropdown-first-headline {
+  float: left;
+  padding: 7px;
+  text-align: left;
+  font-size: 13pt;
+  color: #4565ad;
+  right: 20px;
+}
+.dropdown-first-smalltext {
+  text-align: right;
+  padding: 7px;
+  font-size: 13pt;
+  color: white;
+}
+#dropdown-chapters{
+  left: 12px;
+}
+
+#dropdown-educational-plan {
+    left: 60px;
+}
+
+#dropdown-achieved-competences {
+    left: 108px;
+}
+
+#dropdown-profile {
+    right: 213px;
+}
+
+#dropdown-school {
+    right: 165px;
+}
+
+#dropdown-grade {
+    right: 117px;
+}
+
+#dropdown-help {
+    right: 60px;
+}
+
+#dropdown-logout {
+    right: 12px;
+}
+
+#chapters{
+  margin-left: 12px;
+  background-image: url(../images/chapterOverview-inactive.png);
+}
+
+#chapters:hover{
+  background-image: url(../images/chapterOverview-active.png);
+}
+
+#educational-plan{
+  background-image: url(../images/educationalPlan-inactive.png);
+}
+
+#educational-plan:hover{
+  background-image: url(../images/educationalPlan-active.png);
+}
+
+#achieved-competences{
+  background-image: url(../images/achievedCompetences-inactive.png);
+}
+
+#achieved-competences:hover{
+  background-image: url(../images/achievedCompetences-active.png);
+}
+
+#profile{
+  background-image: url(../images/student/superhero-robin-inactive.png);
+}
+
+#profile:hover{
+  background-image: url(../images/student/superhero-robin-active.png);
+}
+
+#school{
+  background-image: url(../images/school/school-inactive.png);
+}
+
+#school:hover{
+  background-image: url(../images/school/school-rose-active.png);
+}
+
+#grade{
+  background-image: url(../images/studyGroup/studyGroup_2b_inactive.png);
+}
+
+#grade:hover{
+  background-image: url(../images/studyGroup/studyGroup_2b_active.png);
+}
+
+#help{
+  background-image: url(../images/help-inactive.png);
+}
+
+#help:hover{
+  background-image: url(../images/help-active.png);
+}
+
+#logout{
+  margin-right: 12px;
+  background-image: url(../images/logout-inactive.png);
+}
+
+#logout:hover{
+  background-image: url(../images/logout-active.png);
+}

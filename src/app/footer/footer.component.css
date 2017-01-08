@@ -1,0 +1,18 @@
+body{
+  background-color: #001a3a;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  bottom: 0px;
+  height: 50px;
+  color: #4565ad;
+}
+.logo{
+  height: 20px;
+  margin-top: 5px;
+}
+.text{
+  margin: 0px;
+  font-size: 8pt;
+}
