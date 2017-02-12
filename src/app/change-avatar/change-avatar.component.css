@@ -1,0 +1,20 @@
+.buttons{
+display: flex;
+}
+.button{
+  height: 40px;
+  width: 150px;
+  display: block;
+  border-radius: 5px;
+  margin: 2px;
+}
+.cancel{
+  border: 2px solid #8da6d6;
+  background-color: #8da6d6;
+  color: #4565ad;
+}
+.save{
+  border: 2px solid #001a3a;
+  background-color: #001a3a;
+  color: white;
+}

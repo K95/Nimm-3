@@ -12,6 +12,8 @@ import { MiddleTextComponent } from './middle-text/middle-text.component';
 import { RightIllustrationComponent } from './right-illustration/right-illustration.component';
 import { LoginComponent } from './login/login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { DeleteProfileComponent } from './delete-profile/delete-profile.component';
+import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     MiddleTextComponent,
     RightIllustrationComponent,
     LoginComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    DeleteProfileComponent,
+    ChangeAvatarComponent
   ],
   imports: [
     BrowserModule,

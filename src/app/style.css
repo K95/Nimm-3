@@ -6,6 +6,9 @@
   margin-right: 10px;
   border: 2px solid #d3ddf2;
 }
+.icon{
+  max-width: 70px;
+}
 .check-night-button{
   height: 40px;
   width: 150px;
