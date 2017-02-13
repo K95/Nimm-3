@@ -72,7 +72,7 @@ body{
   margin: 2px 0px;
   border-radius: 2px;
 }
-
+/*
 .dropdown-content:before{
   content: ' ';
   position: absolute;
@@ -83,7 +83,7 @@ body{
   border: 5px solid;
   border-color: transparent transparent white white;
 }
-
+*/
 .dropdown-content a:hover {
   background-color: #8da6d6;
   color: white;
