@@ -3,12 +3,7 @@ body{
   flex-flow:column;
   margin: 0px;
 }
-.header{
-}
 .window-container{
   display: flex;
   background-color: green;
-}
-.footer{
-
 }
