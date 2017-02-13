@@ -1,9 +1,1 @@
-body{
-  display: -webkit-flex;
-  flex-flow:column;
-  margin: 0px;
-}
-.window-container{
-  display: flex;
-  background-color: green;
-}
+

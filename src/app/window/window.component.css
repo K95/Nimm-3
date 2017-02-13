@@ -1,6 +1,7 @@
 body{
-  display: flex;
-
+  display: -webkit-flex;
+  flex-flow:column;
+  margin: 0px;
 }
 .left{
   margin-top: 60px;
@@ -17,4 +18,8 @@ body{
   margin-bottom: 50px;
   flex-grow: 1;
   flex-shrink: 1;
+}
+.window-container{
+  display: flex;
+  background-color: green;
 }
