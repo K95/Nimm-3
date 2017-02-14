@@ -19,6 +19,7 @@
 }
 .check-register{
   text-align: center;
+  font-family: Roboto-Thin;
   font-size: 13pt;
   color: #8da6d6;
 }
@@ -32,12 +33,14 @@
 }
 .text-logo{
   text-align: center;
+  font-family: Roboto-Thin;
   margin: 0px;
   font-size: 9px;
   color: #001a3a;
 }
 .text-description{
   text-align: center;
+  font-family: Roboto-Thin;
   font-size: 9pt;
   color: #8da6d6;
 }
@@ -49,13 +52,27 @@
   margin-right: 10px;
   border: 2px solid #d3ddf2;
 }
+
+.field2{
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid #d3ddf2;
+}
+
+
+
 .check-night-button{
+  text-align: center;
   height: 40px;
   width: 150px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  font-family: Widolte_Regular;
+  text-decoration: none;
+  font-size: 13pt;
   border: 2px solid #001a3a;
   border-radius: 5px;
   background-color: #001a3a;
