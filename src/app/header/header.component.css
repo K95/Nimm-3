@@ -57,7 +57,7 @@ body{
   border-top: solid blue 10px;
   border: solid white 2px;
   border-radius: 2px;
-  margin-top: 40px;
+  margin-top: 58px;
   width:250px;
   overflow: hidden;
 }
@@ -220,4 +220,69 @@ body{
 
 #logout:hover{
   background-image: url(../images/logout-active.png);
+}
+
+#Zäbblinvisible{
+  display: none;
+}
+
+#Zäbblinvisible:hover{
+  display: block;
+}
+
+.upper-arrow-white {
+  display: inline-block;
+  position: absolute;
+  color: transparent;
+  background-color: transparent;;
+  width: 250px;
+  border: 2px transparent;
+  margin-left: 40px;
+  z-index: 10;
+  padding: 2px;
+
+}
+
+.upper-arrow-white:after {
+  content: '';
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 260px;
+  top: 33px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+  border-left: 10px solid transparent;
+}
+
+.upper-arrow-blue {
+  display: inline-block;
+  position: absolute;
+  color: transparent;
+  background-color: transparent;;
+  width: 250px;
+  border: 2px transparent;
+  margin-left: 40px;
+  z-index: 10;
+  padding: 2px;
+
+}
+
+
+.upper-arrow-blue:after {
+  content: '';
+  display: block;
+  z-index: 2;
+  position: absolute;
+  right: 260px;
+  top: 35px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #001a3a;
+  border-left: 10px solid transparent;
 }
