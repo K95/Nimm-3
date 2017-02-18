@@ -7,9 +7,9 @@
 <body class="flex-container">
   <section class="left">
     <!-- Kapitelübersicht --->
-    <div class="dropdown flex-button" id="chapters" >
-      <section  class="upper-arrow-white Zäbblinvisible"></section>
-      <section  class="upper-arrow-blue Zäbblinvisible"></section>
+    <div (mouseover)="setDdVisible(0)" (mouseleave)="setDdUnvisible(0)" class="dropdown flex-button" id="chapters" >
+      <section *ngIf="visibleArray[0]" class="upper-arrow-white"></section>
+      <section *ngIf="visibleArray[0]" class="upper-arrow-blue"></section>
       <div class="dropdown-content" id="dropdown-chapters">
         <section class="dropdown-first" >
             <img src="/images/confirmation.png" class="dropdown-first-icon"/>
@@ -19,46 +19,43 @@
 
         </section>
         <section class="dropdown-scroll" id="leftbox" >
-          <a href="#" class="ch00 ch01">DAS BIN ICH!</a>
-          <a href="#" class="ch00 ch02">ICH UND DIE ANDEREN</a>
-          <a href="#" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
-          <a href="#" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
-          <a href="#" class="ch00 ch05">SICH BEWEGEN</a>
-          <a href="#" class="ch00 ch06">LERNEN</a>
-          <a href="#" class="ch00 ch07">ARBEITEN</a>
-          <a href="#" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
-          <a href="#" class="ch00 ch09">SPRECHEN</a>
-          <a href="#" class="ch00 ch10">FREMDSPRACHE</a>
-          <a href="#" class="ch00 ch11">LESEN</a>
-          <a href="#" class="ch00 ch12">SCHREIBEN</a>
-          <a href="#" class="ch00 ch13">MESSEN</a>
-          <a href="#" class="ch00 ch14">LÖSUNGEN FINDEN</a>
-          <a href="#" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
-          <a href="#" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
+          <a (click)="loadChapter(1)" class="ch00 ch01">DAS BIN ICH!</a>
+          <a (click)="loadChapter(2)" class="ch00 ch02">ICH UND DIE ANDEREN</a>
+          <a (click)="loadChapter(3)" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
+          <a (click)="loadChapter(4)" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
+          <a (click)="loadChapter(5)" class="ch00 ch05">SICH BEWEGEN</a>
+          <a (click)="loadChapter(6)" class="ch00 ch06">LERNEN</a>
+          <a (click)="loadChapter(7)" class="ch00 ch07">ARBEITEN</a>
+          <a (click)="loadChapter(8)" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
+          <a (click)="loadChapter(9)" class="ch00 ch09">SPRECHEN</a>
+          <a (click)="loadChapter(10)" class="ch00 ch10">FREMDSPRACHE</a>
+          <a (click)="loadChapter(11)" class="ch00 ch11">LESEN</a>
+          <a (click)="loadChapter(12)" class="ch00 ch12">SCHREIBEN</a>
+          <a (click)="loadChapter(13)" class="ch00 ch13">MESSEN</a>
+          <a (click)="loadChapter(14)" class="ch00 ch14">LÖSUNGEN FINDEN</a>
+          <a (click)="loadChapter(15)" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
+          <a (click)="loadChapter(16)" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
         </section>
       </div>
     </div>
     <!-- Förderplan --->
-    <div class="dropdown flex-button" id="educational-plan">
-      <section  class="upper-arrow-white"></section>
-      <section  class="upper-arrow-blue"></section>
+    <div (mouseover)="setDdVisible(1)" (mouseleave)="setDdUnvisible(1)" class="dd" class="dropdown flex-button" id="educational-plan">
+          <section *ngIf="visibleArray[1]" class="upper-arrow-white"></section>
+          <section *ngIf="visibleArray[1]" class="upper-arrow-blue"></section>
       <div class="dropdown-content" id="dropdown-educational-plan">
         <section class="dropdown-first">
-            <img src="/images/educationalPlan-big.png" class="dropdown-first-icon" />
-            <p class="dropdown-first-headline">
-              FÖRDERPLAN<br>PLATZHALTER
-            </p>
-
+          <img src="/images/educationalPlan-big.png" class="dropdown-first-icon"/>
+          <p class="dropdown-first-headline">
+            DU HAST {{bodyDynamics.edPlans.count}}<br>FÖRDERPLÄNE.
+          </p>
         </section>
-        <a href="#">MATHE ZR BIS 10</a>
-        <a href="#">DEUTSCH SATZANFÄNGE</a>
-        <a href="#">SACHKUNDE "DER WALD"</a>
+        <a *ngFor="let cont of bodyDynamics.edPlans.plans" (click)="loadEducationPlan(cont['_id'])">{{cont.name}}</a>
       </div>
     </div>
     <!-- das kann ich --->
-    <div class="dropdown flex-button" id="achieved-competences">
-      <section  class="upper-arrow-white"></section>
-      <section  class="upper-arrow-blue"></section>
+    <div (mouseover)="setDdVisible(2)" (mouseleave)="setDdUnvisible(2)" class="dropdown flex-button" id="achieved-competences">
+      <section *ngIf="visibleArray[2]" class="upper-arrow-white"></section>
+      <section *ngIf="visibleArray[2]" class="upper-arrow-blue"></section>
       <div class="dropdown-content" id="dropdown-achieved-competences">
         <section class="dropdown-first">
             <img src="/images/achievedCompetences-big.png" class="dropdown-first-icon" />
@@ -69,22 +66,22 @@
         </section>
         <section class="dropdown-scroll">
           <a href="#" class="ch00 ch00">ALLE KOMPETENZEN</a>
-          <a href="#" class="ch00 ch01">DAS BIN ICH!</a>
-          <a href="#" class="ch00 ch02">ICH UND DIE ANDEREN</a>
-          <a href="#" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
-          <a href="#" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
-          <a href="#" class="ch00 ch05">SICH BEWEGEN</a>
-          <a href="#" class="ch00 ch06">LERNEN</a>
-          <a href="#" class="ch00 ch07">ARBEITEN</a>
-          <a href="#" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
-          <a href="#" class="ch00 ch09">SPRECHEN</a>
-          <a href="#" class="ch00 ch10">FREMDSPRACHE</a>
-          <a href="#" class="ch00 ch11">LESEN</a>
-          <a href="#" class="ch00 ch12">SCHREIBEN</a>
-          <a href="#" class="ch00 ch13">MESSEN</a>
-          <a href="#" class="ch00 ch14">LÖSUNGEN FINDEN</a>
-          <a href="#" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
-          <a href="#" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
+            <a (click)="loadCompetences(1)" class="ch00 ch01">DAS BIN ICH!</a>
+            <a (click)="loadCompetences(2)" class="ch00 ch02">ICH UND DIE ANDEREN</a>
+            <a (click)="loadCompetences(3)" class="ch00 ch03">DIE WELT UM MICH HERUM</a>
+            <a (click)="loadCompetences(4)" class="ch00 ch04">ICH WERDE SELBSTSTÄNDIG</a>
+            <a (click)="loadCompetences(5)" class="ch00 ch05">SICH BEWEGEN</a>
+            <a (click)="loadCompetences(6)" class="ch00 ch06">LERNEN</a>
+            <a (click)="loadCompetences(7)" class="ch00 ch07">ARBEITEN</a>
+            <a (click)="loadCompetences(8)" class="ch00 ch08">GESTALTEN UND ERSCHAFFEN</a>
+            <a (click)="loadCompetences(9)" class="ch00 ch09">SPRECHEN</a>
+            <a (click)="loadCompetences(10)" class="ch00 ch10">FREMDSPRACHE</a>
+            <a (click)="loadCompetences(11)" class="ch00 ch11">LESEN</a>
+            <a (click)="loadCompetences(12)" class="ch00 ch12">SCHREIBEN</a>
+            <a (click)="loadCompetences(13)" class="ch00 ch13">MESSEN</a>
+            <a (click)="loadCompetences(14)" class="ch00 ch14">LÖSUNGEN FINDEN</a>
+            <a (click)="loadCompetences(15)" class="ch00 ch15">ZÄHLEN UND RECHNEN</a>
+            <a (click)="loadCompetences(16)" class="ch00 ch16">FORM UND RAUM ENTDECKEN</a>
         </section>
       </div>
     </div>
@@ -94,17 +91,21 @@
   </section>
   <section class="right">
     <!--- Profilmenue --->
-  <div class="dropdown flex-button" id="profile">
-    <section  class="upper-arrow-white"></section>
-    <section  class="upper-arrow-blue"></section>
+  <div (mouseover)="setDdVisible(3)" (mouseleave)="setDdUnvisible(3)" class="dropdown flex-button-student">
+    <section *ngIf="visibleArray[3]" class="upper-arrow-white"></section>
+    <section *ngIf="visibleArray[3]" class="upper-arrow-blue"></section>
+    <button (mouseover)="changeProfileBackgroundImage(avatarPictures[avatarID], true)"
+            (mouseleave)="changeProfileBackgroundImage(avatarPictures[avatarID], false)"
+            [style.backgroundImage]="profileBackgroundImage" class="button-picture-student">
+    </button>
     <div class="dropdown-content" id="dropdown-profile">
       <section class="dropdown-first">
-          <img src="/images/student/superhero-robin-big-active.png" class="dropdown-first-icon" />
+          <img [src]="'../../..'+profileHeaderImage" class="dropdown-first-icon" />
           <p class="dropdown-first-headline">
-            VORNAME<br>NAME
+            {{headerdaten["forename"]}}<br>{{headerdaten["surname"]}}
           </p>
           <section class="dropdown-first-smalltext">
-            DATUM
+            {{headerdaten["birth"]}}
           </section>
       </section>
       <a routerLink="/change-avatar">MEIN PROFILBILD ÄNDERN</a>
@@ -113,33 +114,42 @@
     </div>
   </div>
   <!--- Schulinfo --->
-  <div class="dropdown flex-button" id="school">
-    <section  class="upper-arrow-white"></section>
-    <section  class="upper-arrow-blue"></section>
-    <div class="dropdown-content" id="dropdown-school">
-      <section class="dropdown-first">
-          <img src="/images/school/school-rose-big-active.png" class="dropdown-first-icon" />
-          <p class="dropdown-first-headline">
-            SCHULNAME<br>SCHULNAME<br>SCHULE
+  <div (mouseover)="setDdVisible(4)" (mouseleave)="setDdUnvisible(4)" class="dropdown flex-button-student">
+      <section *ngIf="visibleArray[4]" class="upper-arrow-white"></section>
+      <section *ngIf="visibleArray[4]" class="upper-arrow-blue"></section>
+      <button (mouseover)="changeSchoolBackgroundImage(headerdaten?.school, true)"
+              (mouseleave)="changeSchoolBackgroundImage(headerdaten?.school, false)"
+              [style.backgroundImage]="schoolBackgroundImage" class="button-picture-student"></button>
+      <div *ngIf=visibleArray[4] class="dropdown-content" id="dropdown-school">
+        <section class="dropdown-first">
+          <img [src]="'../../..'+headerdaten?.school?.imageUrlBig" class="dropdown-first-icon" />
+          <p class="dropdown-first-headline" >
+            {{headerdaten?.school?.name}}
           </p>
           <section class="dropdown-first-smalltext">
-          STRASSE NUMMER<br>PLZ ORT<br>LAND<br>EMAIL<br>TELEFON
+          {{headerdaten?.school?.address}}<br>
+          {{headerdaten?.school?.country}}<br>
+          {{headerdaten?.school?.email}}<br>
+          {{headerdaten?.school?.telefon}}
         </section>
-      </section>
+    </section>
     </div>
   </div>
   <!--- Klasseninfo --->
-  <div class="dropdown flex-button" id="grade">
-    <section  class="upper-arrow-white"></section>
-    <section  class="upper-arrow-blue"></section>
-    <div class="dropdown-content" id="dropdown-grade">
+  <div (mouseover)="setDdVisible(5)" (mouseleave)="setDdUnvisible(5)" class="dropdown flex-button-student">
+    <section *ngIf="visibleArray[5]" class="upper-arrow-white"></section>
+    <section *ngIf="visibleArray[5]" class="upper-arrow-blue"></section>
+    <button (mouseover)="changeGroupBackgroundImage(headerdaten?.studyGroups, true)"
+            (mouseleave)="changeGroupBackgroundImage(headerdaten?.studyGroups, false)"
+            [style.backgroundImage]="groupBackgroundImage" class="button-picture-student"></button>
+      <div *ngIf=visibleArray[5] class="dropdown-content" id="dropdown-grade">
       <section class="dropdown-first">
-          <img src="/images/studyGroup/studyGroup_2a_active-big.png" class="dropdown-first-icon" />
+          <img [src]='"../../../"+headerdaten?.studyGroups?.imageUrlBig' class="dropdown-first-icon" />
           <p class="dropdown-first-headline">
-            KLASSE<br>2B<br>&nbsp;
+            KLASSE<br>{{headerdaten?.studyGroups?.class}}
           </p>
           <section class="dropdown-first-smalltext" >
-          KLASSENLEHRER<br>VORNAME NAME
+          KLASSENLEHRER<br>{{headerdaten["formteacher"]}}
         </section>
       </section>
     </div>
@@ -147,10 +157,10 @@
   <!--- Trennstrich --->
     <div class="split"></div>
     <!--- Hilfe --->
-    <div class="dropdown flex-button" id="help">
-      <section  class="upper-arrow-white" ></section>
-      <section  class="upper-arrow-blue"></section>
-    <div class="dropdown-content" id="dropdown-help">
+    <div (mouseover)="setDdVisible(6)" (mouseleave)="setDdUnvisible(6)" class="dropdown flex-button" id="help" >
+      <section *ngIf="visibleArray[6]" class="upper-arrow-white"></section>
+      <section *ngIf="visibleArray[6]" class="upper-arrow-blue"></section>
+    <div *ngIf=visibleArray[6] class="dropdown-content" id="dropdown-help">
       <section class="dropdown-first">
           <img src="/images/help-big.png" class="dropdown-first-icon" />
           <p class="dropdown-first-headline">
@@ -164,18 +174,18 @@
     </div>
     </div>
     <!--- Logout --->
-    <div class="dropdown flex-button" id="logout">
-      <section  class="upper-arrow-white" id="visible"></section>
-      <section  class="upper-arrow-blue" id="visible"></section>
-    <div class="dropdown-content" id="dropdown-logout">
+    <div (mouseover)="setDdVisible(7)" (mouseleave)="setDdUnvisible(7)" class="dropdown flex-button" id="logout" >
+      <section *ngIf="visibleArray[7]" class="upper-arrow-white"></section>
+      <section *ngIf="visibleArray[7]" class="upper-arrow-blue"></section>
+    <div *ngIf=visibleArray[7] class="dropdown-content" id="dropdown-logout">
       <section class="dropdown-first">
           <img src="/images/logout-big.png" class="dropdown-first-icon" />
           <p class="dropdown-first-headline">
             MÖCHTEST DU<br>CHECK!<br>VERLASSEN?
           </p>
       </section>
-      <a href="#">JA</a>
-      <a href="javascript:history.go(0)">NEIN</a>
+      <a (click)="logout()">JA</a>
+      <a href="#">NEIN</a>
     </div>
     </div>
 

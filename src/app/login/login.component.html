@@ -1,11 +1,13 @@
 <img class="header-picture" src="images\login\header.png" />
 <div class="login-container">
-  <input type="email" placeholder="BENUTZERNAME" class="field"/>
-  <input type="password" placeholder="PASSWORT" class="field2"/>
-  <a routerLink='/index' type="submit" class="check-night-button" >LOS!</a>
-  <p class="check-register">Sie möchten mit CHECK! arbeiten?<br/>
-    <a class="check-register" href="google.de">Jetzt registrieren</a>
-  </p>
+  <input type="text" placeholder="BENUTZERNAME" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" class="field"/>
+  <input type="password" placeholder="PASSWORT" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="field2"/>
+  <label>
+    <input type="checkbox" name="angemeldetBleiben" [(ngModel)]="savedLogin" [ngModelOptions]="{standalone: true}">
+    angemeldet bleiben?
+  </label>
+  <button type="submit" (click)="login(username, password, savedLogin)" class="check-night-button">LOS!
+  </button>
 </div>
 <div class="footer-container">
   <img class="center-logo" src="images\login\footer.png"/>

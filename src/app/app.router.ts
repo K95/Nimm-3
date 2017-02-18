@@ -9,8 +9,9 @@ import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
 import { DeleteProfileComponent } from './delete-profile/delete-profile.component';
 
 const routes: Routes = [
-  { path: '',component: LoginComponent},
-  { path: 'index', component: WindowComponent},
+  { path: '',redirectTo: 'login', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent, data:{title: 'Login'}},
+  { path: 'index', component: WindowComponent, data: {title: 'Index'}},
   { path: 'change-password', component: ChangePasswordComponent},
   { path: 'change-avatar', component: ChangeAvatarComponent},
   { path: 'delete-profile', component: DeleteProfileComponent}

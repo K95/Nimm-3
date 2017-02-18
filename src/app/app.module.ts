@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WindowComponent } from './window/window.component';
-import { LeftIllustrationComponent } from './left-illustration/left-illustration.component';
-import { MiddleTextComponent } from './middle-text/middle-text.component';
-import { RightIllustrationComponent } from './right-illustration/right-illustration.component';
 import { LoginComponent } from './login/login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DeleteProfileComponent } from './delete-profile/delete-profile.component';
 import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
+
+import { LoginService } from './login.service';
+import { ApiCommunicatorService } from './api-communicator.service';
+import {BodyDynamicsService} from "./body-dynamics.service";
 
 @NgModule({
   declarations: [
@@ -21,9 +22,6 @@ import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
     HeaderComponent,
     FooterComponent,
     WindowComponent,
-    LeftIllustrationComponent,
-    MiddleTextComponent,
-    RightIllustrationComponent,
     LoginComponent,
     ChangePasswordComponent,
     DeleteProfileComponent,
@@ -35,7 +33,7 @@ import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
     HttpModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [ApiCommunicatorService, LoginService, BodyDynamicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

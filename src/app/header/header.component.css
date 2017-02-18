@@ -18,6 +18,20 @@ body{
     margin-bottom: 8px;
     margin-top: 12px;
 }
+.flex-button-student{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+.button-picture-student{
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+}
 
 .left{
   width: 258px;
@@ -72,18 +86,6 @@ body{
   margin: 2px 0px;
   border-radius: 2px;
 }
-/*
-.dropdown-content:before{
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 16px;
-  top: 0;
-  border: 5px solid;
-  border-color: transparent transparent white white;
-}
-*/
 .dropdown-content a:hover {
   background-color: #8da6d6;
   color: white;
@@ -138,14 +140,17 @@ body{
 
 #dropdown-profile {
     right: 213px;
+    margin-top: 18px;
 }
 
 #dropdown-school {
     right: 165px;
+    margin-top: 18px;
 }
 
 #dropdown-grade {
     right: 117px;
+    margin-top: 18px;
 }
 
 #dropdown-help {
@@ -180,7 +185,7 @@ body{
 #achieved-competences:hover{
   background-image: url(../images/achievedCompetences-active.png);
 }
-
+/*
 #profile{
   background-image: url(../images/student/superhero-robin-inactive.png);
 }
@@ -196,7 +201,7 @@ body{
 #school:hover{
   background-image: url(../images/school/school-rose-active.png);
 }
-
+*/
 #grade{
   background-image: url(../images/studyGroup/studyGroup_2b_inactive.png);
 }
@@ -262,9 +267,9 @@ body{
   display: inline-block;
   position: absolute;
   color: transparent;
-  background-color: transparent;;
+  background-color: transparent;
   width: 250px;
-  border: 2px transparent;
+  border: 3px transparent;
   margin-left: 40px;
   z-index: 10;
   padding: 2px;

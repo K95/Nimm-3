@@ -52,7 +52,6 @@
   margin-right: 10px;
   border: 2px solid #d3ddf2;
 }
-
 .field2{
   height: 40px;
   border-radius: 5px;
@@ -61,10 +60,6 @@
   margin-right: 10px;
   border: 2px solid #d3ddf2;
 }
-
-
-
-
 .check-night-button{
   text-align: center;
   height: 30px;
@@ -81,8 +76,6 @@
   cursor: pointer;
   padding-top: 10px;
 }
-
-
 .center-logo{
   display: block;
   margin-left: auto;
