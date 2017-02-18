@@ -2,6 +2,8 @@ body{
   position: fixed;
 }
 .flex-container {
+    position: fixed;
+    z-index: 2;
     direction: ltr;
     flex-flow: row;
     display: flex;
