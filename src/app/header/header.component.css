@@ -38,6 +38,7 @@ body{
   justify-content: flex-start;
 }
 .logo{
+  z-index: 1;
   text-align: center;
   justify-content: center;
   flex: 1;

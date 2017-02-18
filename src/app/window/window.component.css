@@ -3,13 +3,14 @@
   flex-flow: row;
   overflow-x: hidden;
   overflow-y: hidden;
-  padding-top: 5px;
+  padding-top: 40px;
 }
 
 #pictureInBubble {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: -15px;
+  z-index: inherit;
+  position:  absolute;
+  margin-top: -95px;
+  margin-left: 110px;
 }
 
 .bubble {
@@ -21,7 +22,7 @@
 }
 
 .bubble-text {
-  margin-top: 10px;
+  margin-top: 20px;
   max-width: 250px;
   height: 105px;
   text-align: left;
@@ -136,9 +137,10 @@
   font-family: letteromatic;
   font-size: 7.5pt;
   text-align: left;
-  color: #d3ddf2;
+  color: #001a3a !important;
   padding-top: 100px;
-  padding-left: 5px;
+  padding-left: 15px;
+  margin-top: -105px;
   position: absolute;
 }
 
@@ -153,7 +155,8 @@
   width: 250px;
   border: 2px solid white;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 160px;
+  margin-top: -100px;
   z-index: 10;
   padding: 2px;
 }
@@ -165,7 +168,8 @@
   background-color: transparent;;
   width: 250px;
   border: 2px transparent;
-  margin-left: 40px;
+  margin-left: 155px;
+  margin-top: -103px;
   z-index: 10;
   padding: 2px;
 }
@@ -192,7 +196,8 @@
   background-color: transparent;;
   width: 250px;
   border: 2px transparent;
-  margin-left: 40px;
+  margin-left: 155px;
+  margin-top: -103px;
   z-index: 9;
   padding: 2px;
 }
