@@ -117,16 +117,16 @@
   display: -webkit-flex;
   flex-flow: column;
   margin-top: 104px;
-  margin-left: 0px;
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: 0px;
 }
 
 #illustrationLeft {
   display: -webkit-flex;
   flex-flow: column;
   margin-top: 60px;
-  margin-left: auto;
-  margin-right: 0px;
+  margin-left: 0px;
+  margin-right: auto;
 }
 
 #studentText {
