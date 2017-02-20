@@ -97,11 +97,8 @@ body{
     display: block !important;
 }
 .dropdown-scroll{
-
-
   max-height: calc(100% - 115px);
-  overflow: scroll;
-  margin-right: -20px;
+  overflow-y: scroll;
 }
 
 .dropdown-first {
