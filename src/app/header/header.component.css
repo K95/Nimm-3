@@ -11,7 +11,6 @@ body{
     height: 60px;
     background-color: #001a3a;
 }
-
 .flex-button{
     float: left;
     width: 40px;
@@ -129,39 +128,36 @@ body{
   font-size: 13pt;
   color: white;
 }
+#birth{
+  padding-top: 97px;
+  white-space: nowrap;
+}
 #schoolname{
   width: 130px;
   word-break: normal;
   word-wrap: break-word;
 }
-
 #dropdown-chapters{
   left: 12px;
 }
-
 #dropdown-educational-plan {
     left: 60px;
 }
-
 #dropdown-achieved-competences {
     left: 108px;
 }
-
 #dropdown-profile {
     right: 213px;
     margin-top: 18px;
 }
-
 #dropdown-school {
     right: 165px;
     margin-top: 18px;
 }
-
 #dropdown-grade {
     right: 117px;
     margin-top: 18px;
 }
-
 #dropdown-help {
     right: 60px;
 }
