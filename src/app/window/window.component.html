@@ -2,7 +2,7 @@
 <div [style.background]="bodyDynamics.chapterColor" id="content">
 
   <div id="illustrationLeft">
-    <img [src]="bodyDynamics.chapterFlag" class="flagResponsiveScreen">
+    <img [src]="bodyDynamics.chapterFlag" class="flagResponsiveScreen" id="flagpositionFix">
     <div *ngFor="let illustration of siteIllustrations; let i=index" class="illustrationResponsive">
       <template [ngIf]="i<((bodyDynamics.chapterBubbles.length)/5)"><img
         [src]="'../../'+illustration.illustrationLeft"

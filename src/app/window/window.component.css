@@ -74,6 +74,7 @@
 
   .flagResponsiveScreen {
     display: none;
+
   }
 
   .left-arrow-white {
@@ -83,6 +84,11 @@
   .left-arrow-blue {
     display: none !important;
   }
+}
+#flagpositionFix{
+  top: 65px;
+  left: 0px;
+  position: absolute;
 }
 
 @media screen and (max-width: 700px) {
@@ -124,6 +130,7 @@
 }
 
 #illustrationLeft {
+  margin-top: 44px;
   display: -webkit-flex;
   flex-flow: column;
   margin-left: auto;
