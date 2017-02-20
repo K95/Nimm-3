@@ -43,7 +43,12 @@
   font-family: Roboto-Thin;
   font-size: 9pt;
   color: #8da6d6;
+  
 }
+#link{
+  text-decoration: none;
+}
+
 .field{
   height: 40px;
   border-radius: 5px;
