@@ -129,6 +129,12 @@ body{
   font-size: 13pt;
   color: white;
 }
+#schoolname{
+  width: 130px;
+  word-break: normal;
+  word-wrap: break-word;
+}
+
 #dropdown-chapters{
   left: 12px;
 }
