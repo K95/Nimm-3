@@ -3,7 +3,7 @@
   flex-flow: row;
   overflow-x: hidden;
   overflow-y: hidden;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 #pictureInBubble {
@@ -116,7 +116,7 @@
 #illustrationRight {
   display: -webkit-flex;
   flex-flow: column;
-  margin-top: 104px;
+  margin-top: 44px;
   margin-left: auto;
   margin-right: 0px;
 }
@@ -124,7 +124,6 @@
 #illustrationLeft {
   display: -webkit-flex;
   flex-flow: column;
-  margin-top: 60px;
   margin-left: 0px;
   margin-right: auto;
 }

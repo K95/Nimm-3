@@ -25,7 +25,7 @@ export class ChangeAvatarComponent implements OnInit {
 
   ngOnInit() {
     if (!this.loginService.isLoggedIn()) {
-      this.router.navigate(["../home"]);
+      this.router.navigate(["../login"]);
     }
     this.titleService.setTitle( "CHECK! - Profilbild ändern" );
     this.getAvatars();

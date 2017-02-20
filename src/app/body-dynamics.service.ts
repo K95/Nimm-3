@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core';
 export class BodyDynamicsService {
 
   public chapterColor = "#8da6d6";
-  public chapterFlag = "../../../images/surprise.png";
+  public chapterFlag = "../../../images/placeholder_allcompentences.png";
   public buttonUp = "../../../images/chapter15/scrollUp.png";
   public buttonDown = "../../../images/chapter15/scrollDown.png";
   public pictureInBubble = "../../../images/chapter15/competenceDone.png";
