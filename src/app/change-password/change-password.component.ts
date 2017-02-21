@@ -35,7 +35,8 @@ export class ChangePasswordComponent implements OnInit {
     this.newPW2 = (<HTMLInputElement>document.getElementById('newPW2')).value;
 
 
-    if (this.newPW1.length <7){
+    if (this.newPW1.length <7 ){
+    this.popUpService.throwAdvice("Passwort muss den Vorgaben entsprechen!")
     } else if(this.newPW1 !== this.newPW2) {
       this.popUpService.throwWarning("Die Passwörter stimmen nicht überein, bitte versuchen Sie es erneut!");
     } else if (this.oldPW === this.newPW1) {
