@@ -13,12 +13,15 @@
 }
 
 .dialog_close-btn {
-  border: 0;
+  border: 1;
   color: #2d2d2d;
   position: absolute;
   top: 5px;
   right: -5px;
   background: url(../../images/delete.png) no-repeat;
+  height:30px;
+  width:30px;
+  margin-right: 10px;
 }
 
 .displayed {
