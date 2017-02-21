@@ -7,6 +7,7 @@ import {PopUpService} from '../pop-up.service';
 
 const API_DATA = require('../api.json')
 
+
 @Component({
   selector: 'app-change-password',
   templateUrl: './change-password.component.html',
@@ -34,8 +35,10 @@ export class ChangePasswordComponent implements OnInit {
     this.newPW1 = (<HTMLInputElement>document.getElementById('newPW1')).value;
     this.newPW2 = (<HTMLInputElement>document.getElementById('newPW2')).value;
 
+    var Regex = require("regex");
+    var regex = new Regex(/^(?=^.{7,}$)(?=.*\d)(?=.*[$@$!%*?&])(?=.*[A-Z])(?=.*[a-z]).*$/);
 
-    if (this.newPW1.value.match(/^(?=^.{7,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/)){
+    if (!regex.test(this.newPW1)){
     this.popUpService.throwAdvice("Passwort muss den Vorgaben entsprechen!");
     } else if(this.newPW1 !== this.newPW2) {
       this.popUpService.throwWarning("Die Passwörter stimmen nicht überein, bitte versuchen Sie es erneut!");
