@@ -14,7 +14,12 @@ import { ChangeAvatarComponent } from './change-avatar/change-avatar.component';
 
 import { LoginService } from './login.service';
 import { ApiCommunicatorService } from './api-communicator.service';
-import {BodyDynamicsService} from "./body-dynamics.service";
+import { BodyDynamicsService } from './body-dynamics.service';
+import { PopUpService } from './pop-up.service';
+
+import { PopUpWarningComponent } from './pop-up-warning/pop-up-warning.component';
+import { PopUpAdviceComponent } from './pop-up-advice/pop-up-advice.component';
+import { PopUpConfirmationComponent } from './pop-up-confirmation/pop-up-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,10 @@ import {BodyDynamicsService} from "./body-dynamics.service";
     LoginComponent,
     ChangePasswordComponent,
     DeleteProfileComponent,
-    ChangeAvatarComponent
+    ChangeAvatarComponent,
+    PopUpWarningComponent,
+    PopUpAdviceComponent,
+    PopUpConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,7 @@ import {BodyDynamicsService} from "./body-dynamics.service";
     HttpModule,
     RoutingModule
   ],
-  providers: [ApiCommunicatorService, LoginService, BodyDynamicsService],
+  providers: [ApiCommunicatorService, LoginService, BodyDynamicsService, PopUpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

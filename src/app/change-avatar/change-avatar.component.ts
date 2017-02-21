@@ -3,6 +3,7 @@ import {ApiCommunicatorService} from '../api-communicator.service';
 import { Title } from '@angular/platform-browser';
 import {Router} from '@angular/router';
 import {LoginService} from '../login.service';
+import {PopUpService} from '../pop-up.service';
 
 @Component({
   selector: 'app-change-avatar',
@@ -20,14 +21,14 @@ export class ChangeAvatarComponent implements OnInit {
   public pictureID;
   public index;
 
-  constructor(private apiCommunicatorService: ApiCommunicatorService, private titleService: Title,private loginService: LoginService, private router: Router) {
+  constructor(private apiCommunicatorService: ApiCommunicatorService, private titleService: Title,private loginService: LoginService, private router: Router, private popUpService: PopUpService) {
   }
 
   ngOnInit() {
     if (!this.loginService.isLoggedIn()) {
       this.router.navigate(["../login"]);
     }
-    this.titleService.setTitle( "CHECK! - Profilbild ändern" );
+    this.titleService.setTitle( "CHECK! - Avatar ändern" );
     this.getAvatars();
   }
 
@@ -45,12 +46,13 @@ export class ChangeAvatarComponent implements OnInit {
 
   public changePicture() {
     this.apiCommunicatorService.putProfilePicture(this.pictureID).subscribe((res: any) => {
+            this.popUpService.throwConfirmation("Avatar wurde geändert!");
             if(!!sessionStorage.getItem("avatarId")){
                 sessionStorage.setItem("avatarId", this.pictureID);
             } else {
               localStorage.setItem("avatarId", this.pictureID);
             }
-          });
+            }, (err) => this.popUpService.throwWarning("Avatar konnte nicht geändert werden, bitte versuchen Sie es erneut."));
   }
 
 }
