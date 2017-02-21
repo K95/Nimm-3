@@ -35,7 +35,7 @@ export class ChangePasswordComponent implements OnInit {
     this.newPW2 = (<HTMLInputElement>document.getElementById('newPW2')).value;
 
 
-    if (this.newPW1.length <7 ){
+    if (this.newPW1.value.match(/^(?=^.{7,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/)){
     this.popUpService.throwAdvice("Passwort muss den Vorgaben entsprechen!")
     } else if(this.newPW1 !== this.newPW2) {
       this.popUpService.throwWarning("Die Passwörter stimmen nicht überein, bitte versuchen Sie es erneut!");
@@ -44,7 +44,7 @@ export class ChangePasswordComponent implements OnInit {
     } else {
       let body = {"newpassword": this.newPW1,"password": this.oldPW}
       this.apiCommunicatorService.putWithHeader(API_DATA.chgPassword, body).subscribe((res: any) => this.popUpService.throwConfirmation("Passwortänderung erfolgreich!"),(err) => this.popUpService.throwWarning("Passworteingabe falsch, bitte versuchen Sie es erneut!"));
-  }
+    }
 
   }
   }
