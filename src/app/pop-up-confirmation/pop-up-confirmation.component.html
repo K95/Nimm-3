@@ -6,6 +6,6 @@
   <p id="dialogText">{{popUpService.confirmation.text}}</p>
 
 
-  <button *ngIf="closable" (click)="popUpService.resetSuccess()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+  <button *ngIf="closable" (click)="popUpService.resetConfirmation()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 </div>
 <div *ngIf="visible" class="overlay"></div>

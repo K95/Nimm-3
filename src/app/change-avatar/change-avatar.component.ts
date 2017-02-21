@@ -46,7 +46,7 @@ export class ChangeAvatarComponent implements OnInit {
 
   public changePicture() {
     this.apiCommunicatorService.putProfilePicture(this.pictureID).subscribe((res: any) => {
-            this.popUpService.throwConfirmation("Avatar wurde geändert!");
+            this.popUpService.throwConfirmation("Avatar wurde gespeichert!");
             if(!!sessionStorage.getItem("avatarId")){
                 sessionStorage.setItem("avatarId", this.pictureID);
             } else {
