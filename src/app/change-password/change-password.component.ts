@@ -3,6 +3,7 @@ import { ApiCommunicatorService } from '../api-communicator.service';
 import { Title } from '@angular/platform-browser';
 import {Router} from '@angular/router';
 import {LoginService} from '../login.service';
+import {PopUpService} from '../pop-up.service';
 
 const API_DATA = require('../api.json')
 
@@ -17,7 +18,7 @@ export class ChangePasswordComponent implements OnInit {
   private newPW1;
   private newPW2;
 
-  constructor(private apiCommunicatorService:ApiCommunicatorService, private titleService: Title,private loginService: LoginService, private router: Router) {
+  constructor(private apiCommunicatorService:ApiCommunicatorService, private popUpService: PopUpService, private titleService: Title,private loginService: LoginService, private router: Router) {
   }
 
   ngOnInit() {
@@ -34,11 +35,14 @@ export class ChangePasswordComponent implements OnInit {
     this.newPW2 = (<HTMLInputElement>document.getElementById('newPW2')).value;
 
 
-    if (this.newPW1.length <7){  
+    if (this.newPW1.length <7){
+    } else if(this.newPW1 !== this.newPW2) {
+      this.popUpService.throwWarning("Die Passwörter stimmen nicht überein, bitte versuchen Sie es erneut!");
+    } else if (this.oldPW === this.newPW1) {
+      this.popUpService.throwWarning("Das alte Passwort darf nicht mit dem neuen übereinstimmen!");
     } else {
       let body = {"newpassword": this.newPW1,"password": this.oldPW}
-      this.apiCommunicatorService.putWithHeader(API_DATA.chgPassword, body).subscribe;
-
+      this.apiCommunicatorService.putWithHeader(API_DATA.chgPassword, body).subscribe((res: any) => this.popUpService.throwConfirmation("Passwortänderung erfolgreich!"),(err) => this.popUpService.throwWarning("Passworteingabe falsch, bitte versuchen Sie es erneut!"));
   }
 
   }

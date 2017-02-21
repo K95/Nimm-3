@@ -6,7 +6,7 @@
   <p id="dialogText">{{popUpService.warning.text}}</p>
 
 
-  <button *ngIf="closable" (click)="popUpService.resetError()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+  <button *ngIf="closable" (click)="popUpService.resetWarning()" aria-label="Close" class="dialog_close-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
 
 </div>
 <div *ngIf="visible" class="overlay"></div>

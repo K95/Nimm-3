@@ -10,7 +10,7 @@
       <tr>
         <td align="right" width="500" class="fontPassword">PASSWORT</td>
         <td align="center" width="300">  <input type="password" id="passwordField" class="field"/></td>
-        <td  width="500" rowspan="3"> Platzhalter für bubble </td>
+        <td  width="500" rowspan="3"></td>
       </tr>
     </table>
     <div align="center" class="buttons" lass="fields-middle" >
@@ -25,3 +25,6 @@
     </div>
   </div>
 </div>
+<app-pop-up-advice [(visible)]="popUpService.advice.show"></app-pop-up-advice>
+<app-pop-up-confirmation [(visible)]="popUpService.confirmation.show"></app-pop-up-confirmation>
+<app-pop-up-warning [(visible)]="popUpService.warning.show"></app-pop-up-warning>
