@@ -35,10 +35,13 @@ export class ChangePasswordComponent implements OnInit {
     this.newPW1 = (<HTMLInputElement>document.getElementById('newPW1')).value;
     this.newPW2 = (<HTMLInputElement>document.getElementById('newPW2')).value;
 
+
+    // anlegen von regexjs abfrage
     var pw = this.newPW1;
-    var Suche = /(^(?=^.{7,}$)(?=.*\d)(?=.*[$@$!%*?&])(?=.*[A-Z])(?=.*[a-z]).*$)/g; 
+    var Suche = /(^(?=^.{7,}$)(?=.*\d)(?=.*[$@$!%*?&])(?=.*[A-Z])(?=.*[a-z]).*$)/g;
     var Ergebnis = Suche.test(pw);
 
+   // prüfen von regexjs abfrage
     if (Ergebnis == false){
     this.popUpService.throwWarning("Passwort muss den Vorgaben entsprechen!");
     } else if(this.newPW1 !== this.newPW2) {
