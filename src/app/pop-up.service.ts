@@ -42,7 +42,7 @@ export class PopUpService {
     resetConfirmation(){
       this.confirmation.text = "";
       this.confirmation.show = false;
-      this.router.navigate(["../login"]);
+      this.router.navigate(["../index"]);
       if(this.confirmation.logout){
         this.loginService.logout();
       }

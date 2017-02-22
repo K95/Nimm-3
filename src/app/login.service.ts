@@ -38,6 +38,7 @@ export class LoginService {
     localStorage.clear();
     sessionStorage.clear();
     this.loggedIn = false;
+    javascript:history.go(0);
   }
 
   isLoggedIn() {
