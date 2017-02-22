@@ -12,6 +12,7 @@
   max-width: 70px;
 }
 .check-night-button{
+    font-family: Lato-Black;
   height: 40px;
   width: 150px;
   display: block;
@@ -187,3 +188,4 @@
 @font-face { font-family: "widolte_regular"; src: url(ttf/Widolte_Regular.otf)}
 @font-face { font-family: "letteromatic"; src: url(ttf/ltromatic.ttf);}
 @font-face { font-family: "dr-hh-el"; src: url(ttf/dr-hh-el.ttf);}
+@font-face { font-family: "lato-black"; src: url(ttf/Lato-Black.ttf)}
