@@ -86,7 +86,7 @@ body{
   text-decoration: none;
   display: block;
   background-color: #001a3a;
-  margin: 2px 0px;
+  margin-top: 2px;
   border-radius: 2px;
 }
 .dropdown-content a:hover {
