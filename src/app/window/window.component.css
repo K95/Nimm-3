@@ -33,11 +33,6 @@
   word-wrap: break-word;
 }
 
-.bubble-img {
-  padding: 15px;
-  margin-right: 15px;
-}
-
 #scrollButtonTop {
   position: fixed;
   z-index: 1;

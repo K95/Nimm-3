@@ -1,44 +1,3 @@
-.header-picture{
-  width: 100%;
-  max-width: 559px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.user-field{
-  color : #8da6d6;
-}
-.changepw-container{
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  max-width: 100%;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.left-container{
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  max-width: 100%;
-  margin-top: 10px;
-}
-
-.text-logo{
-  text-align: center;
-  font-family: Roboto-Thin;
-  margin: 0px;
-  font-size: 9px;
-  color: #001a3a;
-}
-.text-description{
-  text-align: center;
-  font-family: Roboto-Thin;
-  font-size: 9pt;
-  color: #8da6d6;
-}
 .field{
   height: 40px;
   width: 300px;
@@ -49,28 +8,8 @@
   border: 2px solid #d3ddf2;
 }
 
-.field2{
-  height: 40px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 2px solid #d3ddf2;
-}
-
 p {
   text-align: right;
-}
-.fields-middle2{
-  z-index: 10;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
 }
 
 .fontPassword {
@@ -93,16 +32,6 @@ p {
   color: white;
   cursor: pointer;
 }
-
-.save{
-  font-size: 13pt;
-   font-family: Lato-Black;
-  border: 2px solid #001a3a;
-  background-color: #001a3a;
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-}
 .cancel{
   font-size: 13pt;
    font-family: Lato-Black;
@@ -111,7 +40,6 @@ p {
   color: #4565ad;
   margin-left: auto;
   margin-right: auto;
-
 }
 .button{
   height: 40px;

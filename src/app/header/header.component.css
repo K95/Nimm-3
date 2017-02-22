@@ -149,18 +149,22 @@ body{
 #dropdown-achieved-competences {
     left: 108px;
 }
+
 #dropdown-profile {
     right: 213px;
     margin-top: 18px;
 }
+
 #dropdown-school {
     right: 165px;
     margin-top: 18px;
 }
+
 #dropdown-grade {
     right: 117px;
     margin-top: 18px;
 }
+
 #dropdown-help {
     right: 60px;
 }
@@ -193,30 +197,6 @@ body{
 #achieved-competences:hover{
   background-image: url(../images/achievedCompetences-active.png);
 }
-/*
-#profile{
-  background-image: url(../images/student/superhero-robin-inactive.png);
-}
-
-#profile:hover{
-  background-image: url(../images/student/superhero-robin-active.png);
-}
-
-#school{
-  background-image: url(../images/school/school-inactive.png);
-}
-
-#school:hover{
-  background-image: url(../images/school/school-rose-active.png);
-}
-*/
-#grade{
-  background-image: url(../images/studyGroup/studyGroup_2b_inactive.png);
-}
-
-#grade:hover{
-  background-image: url(../images/studyGroup/studyGroup_2b_active.png);
-}
 
 #help{
   background-image: url(../images/help-inactive.png);
@@ -235,14 +215,6 @@ body{
   background-image: url(../images/logout-active.png);
 }
 
-#Zäbblinvisible{
-  display: none;
-}
-
-#Zäbblinvisible:hover{
-  display: block;
-}
-
 .upper-arrow-white {
   display: inline-block;
   position: absolute;
@@ -254,7 +226,6 @@ body{
   z-index: 10;
   padding: 2px;
   padding-bottom: 0px;
-
 }
 
 .upper-arrow-white:after {
@@ -282,9 +253,7 @@ body{
   margin-left: 40px;
   z-index: 10;
   padding: 2px;
-
 }
-
 
 .upper-arrow-blue:after {
   content: '';
